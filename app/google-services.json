@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "498354058225",
+    "project_id": "boma-realtors",
+    "storage_bucket": "boma-realtors.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498354058225:android:b04b42b6f99d73ffbaca50",
+        "android_client_info": {
+          "package_name": "com.example.bomarealtors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498354058225-pcmflfaptcb230djjf3dqqq8p7lfardf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhFHDU_n3Cgwd0aF8_1ZCv9CjdjSujfMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498354058225-pcmflfaptcb230djjf3dqqq8p7lfardf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
