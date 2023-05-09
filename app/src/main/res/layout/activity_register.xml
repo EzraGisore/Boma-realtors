@@ -5,29 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back"
-    tools:context=".login">
+    tools:context=".Register">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
         android:background="@color/white"
         android:fontFamily="sans-serif"
-        android:text="Log In"
+        android:text="REGISTER"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="37dp"
         android:layout_marginEnd="41dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginBottom="42dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,27 +44,25 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         style="@style/custom_card_view_style"
-        android:layout_width="409dp"
-        android:layout_height="648dp"
-        android:layout_marginTop="9dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
             android:id="@+id/cre_btn"
             android:layout_width="143dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="235dp"
             android:background="@color/app_theme"
             android:backgroundTint="@color/app_theme"
             android:foregroundTint="@color/app_theme"
-            android:text="Sign In"
+            android:text="Create Account"
             android:textColor="@color/app_theme_light"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -75,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="43dp"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="115dp"
             android:background="@color/edit_text_background"
             android:drawableLeft="@drawable/baseline_email_24"
             android:drawableTint="@color/app_theme"
@@ -92,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="43dp"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="175dp"
             android:background="@color/edit_text_background"
             android:drawableLeft="@drawable/baseline_lock_24"
             android:drawableTint="@color/app_theme"
@@ -104,30 +102,30 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/log_reg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="135dp"
-            android:layout_marginTop="164dp"
-            android:text="Forgot Password?"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="325dp"
+            android:text="Already have an Account?"
             android:textColor="@color/app_theme"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/log_reg"
+        <EditText
+            android:id="@+id/name_reg"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="115dp"
-            android:layout_marginTop="270dp"
-            android:text="Don't have an Account?"
-            android:textColor="@color/app_theme"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="48dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/app_theme_light"
+            android:drawableLeft="@drawable/baseline_person_pin_24"
+            android:drawableTint="@color/app_theme"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text" />
 
     </com.google.android.material.card.MaterialCardView>
 

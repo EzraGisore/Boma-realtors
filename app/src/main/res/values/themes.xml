@@ -17,4 +17,8 @@
         <item name="cornerSizeBottomLeft">0dp</item>
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
+    <style name="Btn_theme" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">#009dff</item>
+    </style>
+
 </resources>
