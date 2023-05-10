@@ -6,4 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".submit_res">
 
+    <EditText
+        android:id="@+id/name_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/email_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/phone_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_s" />
+
+    <EditText
+        android:id="@+id/phone_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/res_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_s" />
+
+    <EditText
+        android:id="@+id/res_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Residence(e.g Apartment,Bungalow,Mansion)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/room_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_s" />
+
+    <EditText
+        android:id="@+id/room_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="Number of rooms(total and bedrooms)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/price_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res_s" />
+
+    <EditText
+        android:id="@+id/price_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Asking Price(Purchase or Lease)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/address_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_s" />
+
+    <EditText
+        android:id="@+id/address_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="Physical Address (Street,buildng,adjacent landmarks)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btn_upl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_s" />
+
+    <Button
+        android:id="@+id/btn_upl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="UPLOAD DATA"
+        app:layout_constraintBottom_toTopOf="@+id/back_btn_res_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_s" />
+
+    <Button
+        android:id="@+id/back_btn_res_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="16dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_upl"
+        app:layout_constraintTop_toBottomOf="@+id/btn_upl" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
