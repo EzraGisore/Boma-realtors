@@ -15,6 +15,30 @@
         android:theme="@style/Theme.BomaRealtors"
         tools:targetApi="31">
         <activity
+            android:name=".submit_com"
+            android:exported="false" />
+        <activity
+            android:name=".submit_off"
+            android:exported="false" />
+        <activity
+            android:name=".submit_res"
+            android:exported="false" />
+        <activity
+            android:name=".view_commercial"
+            android:exported="false" />
+        <activity
+            android:name=".view_office"
+            android:exported="false" />
+        <activity
+            android:name=".view_residential"
+            android:exported="false" />
+        <activity
+            android:name=".topr_sell"
+            android:exported="false" />
+        <activity
+            android:name=".TOPr"
+            android:exported="false" />
+        <activity
             android:name=".goal"
             android:exported="false" />
         <activity
