@@ -6,49 +6,65 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.database.FirebaseDatabase
 
 class submit_res : AppCompatActivity() {
-    lateinit var s_name:EditText
-    lateinit var s_email:EditText
-    lateinit var s_phone:EditText
-    lateinit var s_res:EditText
-    lateinit var s_rooms:EditText
-    lateinit var s_price:EditText
-    lateinit var s_address:EditText
-    lateinit var s_upl_btn:Button
-    lateinit var s_back:Button
+    lateinit var sname:EditText
+    lateinit var semail:EditText
+    lateinit var sphone:EditText
+    lateinit var sres:EditText
+    lateinit var srooms:EditText
+    lateinit var sprice:EditText
+    lateinit var saddress:EditText
+    lateinit var supl_btn:Button
+    lateinit var sback:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_submit_res)
-        s_name = findViewById(R.id.name_s)
-        s_email = findViewById(R.id.email_s)
-        s_phone = findViewById(R.id.phone_s)
-        s_res = findViewById(R.id.res_s)
-        s_rooms = findViewById(R.id.room_s)
-        s_price = findViewById(R.id.price_s)
-        s_address = findViewById(R.id.address_s)
-        s_upl_btn = findViewById(R.id.btn_upl)
-        s_back = findViewById(R.id.back_btn_res_s)
+        sname = findViewById(R.id.name_s)
+        semail = findViewById(R.id.email_s)
+        sphone = findViewById(R.id.phone_s)
+        sres = findViewById(R.id.res_s)
+        srooms = findViewById(R.id.room_s)
+        sprice = findViewById(R.id.price_s)
+        saddress = findViewById(R.id.address_s)
+        supl_btn = findViewById(R.id.btn_upl)
+        sback = findViewById(R.id.back_btn_res_s)
+        var database = FirebaseDatabase.getInstance()
+        var databaseref = database.getReference("property")
 
 
 
-        s_upl_btn.setOnClickListener {
-            var s_name_s = s_name.text.toString().trim()
-            var s_email_s = s_email.text.toString().trim()
-            var s_phone_s = s_phone.text.toString().trim()
-            var s_res_s = s_res.text.toString().trim()
-            var s_room_s = s_rooms.text.toString().trim()
-            var s_price_s = s_price.text.toString().trim()
-            var s_address_s = s_address.text.toString().trim()
+        supl_btn.setOnClickListener {
+            var snames = sname.text.toString().trim()
+            var semails = semail.text.toString().trim()
+            var sphones = sphone.text.toString().trim()
+            var sress = sres.text.toString().trim()
+            var srooms = srooms.text.toString().trim()
+            var sprices = sprice.text.toString().trim()
+            var saddresss = saddress.text.toString().trim()
 
-            if(s_name_s.isEmpty()||s_email_s.isEmpty()||s_phone_s.isEmpty()||s_res_s.isEmpty()||s_room_s.isEmpty()||s_price_s.isEmpty()||s_address_s.isEmpty()){
+
+
+            if(snames.isEmpty()||semails.isEmpty()||sphones.isEmpty()||sress.isEmpty()||srooms.isEmpty()||sprices.isEmpty()||saddresss.isEmpty()){
                 Toast.makeText(this, "Invalid Entry!", Toast.LENGTH_SHORT).show()
             }else{
+                var s_property = Property(snames,semails,sphones,sress,srooms,sprices,saddresss)
+                var ref = FirebaseDatabase.getInstance().getReference().child("property")
+
+                ref.setValue(s_property).addOnCompleteListener {
+                    if(it.isSuccessful){
+                        Toast.makeText(this, "Data Uploaded successfully!", Toast.LENGTH_SHORT).show()
+                    }else{
+                        Toast.makeText(this, "Failed to upload car data!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
 
             }
         }
-        s_back.setOnClickListener {
+        sback.setOnClickListener {
             var gototoprs = Intent(this, topr_sell::class.java)
             startActivity(gototoprs)
             finish()

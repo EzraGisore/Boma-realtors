@@ -63,7 +63,7 @@
             android:backgroundTint="@color/app_theme"
             android:foregroundTint="@color/app_theme"
             android:text="Create Account"
-            android:textColor="@color/app_theme_light"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:iconTint="@color/app_theme" />
@@ -71,7 +71,7 @@
         <EditText
             android:id="@+id/email_reg"
             android:layout_width="wrap_content"
-            android:layout_height="43dp"
+            android:layout_height="48dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="115dp"
             android:background="@color/edit_text_background"
@@ -88,7 +88,7 @@
         <EditText
             android:id="@+id/pass_reg"
             android:layout_width="wrap_content"
-            android:layout_height="43dp"
+            android:layout_height="48dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="175dp"
             android:background="@color/edit_text_background"
